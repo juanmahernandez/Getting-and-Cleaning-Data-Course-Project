@@ -82,6 +82,6 @@ tidyFileName <- "tidy.txt"
 if(file.exists(tidyFileName)) {
    file.remove(tidyFileName)
 }
-write.csv(allData.extract.Cast, file = tidyFileName, quote = T)
+write.table(allData.extract.Cast, file = tidyFileName, row.name = FALSE)
 message("Process Terminated.")
 rm(list = ls())
